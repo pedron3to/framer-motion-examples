@@ -6,9 +6,8 @@ import React, {
   useRef,
 } from "react";
 
-import styled, { ThemeProvider } from "styled-components";
+
 import Head from "next/head";
-import AOS from "aos";
 
 //import Header from "../Header";
 import Footer from "../Footer";
@@ -17,13 +16,11 @@ import ModalVideo from "../ModalVideo";
 
 import GlobalContext from "../../context/GlobalContext";
 
-import GlobalStyle from "../../utils/globalStyle";
+//import GlobalStyle from "../../utils/globalStyle";
 
-import imgFavicon from "../../assets/favicon.png";
+//import imgFavicon from "../../assets/favicon.png";
 
-import { get, merge } from "lodash";
-// the full theme object
-import { theme as baseTheme } from "../../utils";
+import { theme as baseTheme } from '../../';
 
 const Loader = styled.div`
   position: fixed;
@@ -53,94 +50,18 @@ const getTheme = (mode) =>
   });
 
 const Layout = ({ children, pageContext }) => {
-  const gContext = useContext(GlobalContext);
-
-  const [visibleLoader, setVisibleLoader] = useState(true);
-
-  useLayoutEffect(() => {
-    AOS.init();
-    setVisibleLoader(false);
-  }, []);
-
-  // Navbar style based on scroll
-  const eleRef = useRef();
-
-  useEffect(() => {
-    window.addEventListener(
-      "popstate",
-      function (event) {
-        // The popstate event is fired each time when the current history entry changes.
-        gContext.closeAbout();
-        gContext.closeContact();
-        gContext.closeOffcanvas();
-      },
-      false
-    );
-    window.addEventListener(
-      "pushState",
-      function (event) {
-        // The pushstate event is fired each time when the current history entry changes.
-        gContext.closeAbout();
-        gContext.closeContact();
-        gContext.closeOffcanvas();
-      },
-      false
-    );
-  }, [gContext]);
-
-  if (pageContext.layout === "bare") {
-    return (
-      <ThemeProvider
-        theme={
-          gContext.themeDark ? getTheme(modes.dark) : getTheme(modes.light)
-        }
-      >
-        <GlobalStyle />
-        <Head>
-          <title>Claramente</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link rel="icon" type="image/png" href={imgFavicon} />
-        </Head>
-        <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
-          <div className="load-circle">
-            <span className="one"></span>
-          </div>
-        </Loader>
-        <div className="site-wrapper overflow-hidden" ref={eleRef}>
-          {children}
-        </div>
-
-        <ModalVideo />
-      </ThemeProvider>
-    );
-  }
-
-  return (
+   return (
     <>
-      <ThemeProvider
-        theme={
-          gContext.themeDark ? getTheme(modes.dark) : getTheme(modes.light)
-        }
-      >
-        <GlobalStyle />
+     
         <Head>
           <title>Claramente</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
+          {/* <link rel="icon" type="image/png" href={imgFavicon} /> */}
         </Head>
-        <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
-          <div className="load-circle">
-            <span className="one" />
-          </div>
-        </Loader>
-        <div className="site-wrapper overflow-hidden" ref={eleRef}>
-          {/* <Header isDark={gContext.headerDark} /> */}
-          {children}
-
-          <Footer isDark={gContext.footerDark} />
+        <div>{children}
+          <Footer/>
         </div>
-
-        <ModalVideo />
-      </ThemeProvider>
+     
+      
     </>
   );
 };
