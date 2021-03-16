@@ -1,13 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  space,
-  border,
-  typography,
-  shadow,
-  flexbox,
-  layout,
-} from "styled-system";
 
 const CheckStyled = styled.label`
   display: inline-flex;
@@ -20,12 +12,7 @@ const CheckStyled = styled.label`
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  ${border};
-  ${space};
-  ${typography};
-  ${shadow};
-  ${flexbox};
-  ${layout};
+
 `;
 
 const Check = styled.span`
@@ -53,7 +40,7 @@ const Text = styled.p`
 
 const Checkbox = ({
   children = "Keep me signed in",
-  onClick = () => {},
+  onClick = () => { },
   ...rest
 }) => {
   const uID = "check_";

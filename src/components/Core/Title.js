@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { color, space, typography, shadow } from "styled-system";
 import { device } from "../../utils";
 
 const SectionTitle = styled.h2`
@@ -20,12 +19,7 @@ const SectionTitle = styled.h2`
     line-height: 70px;
     margin-bottom: 30px;
   }
-
-  ${color};
-  ${space};
-  ${typography};
-  ${shadow};
-`;
+ `;
 
 const HeroTitle = styled(SectionTitle)`
   letter-spacing: -2.81px;
@@ -54,10 +48,7 @@ const CardTitle = styled.h4`
   font-weight: 700;
   letter-spacing: -0.66px;
   line-height: 28px;
-  ${color};
-  ${space};
-  ${typography};
-  ${shadow};
+  
 `;
 
 const Title = ({ variant, ...rest }) => {

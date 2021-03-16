@@ -1,13 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  color,
-  space,
-  typography,
-  shadow,
-  layout,
-  border,
-} from "styled-system";
 
 const InputSolid = styled.input`
   font-size: 18px;
@@ -18,12 +10,7 @@ const InputSolid = styled.input`
   background-clip: padding-box;
   border: ${({ theme }) => `1px solid ${theme.colors.border}`};
   border-radius: 10px;
-  ${color};
-  ${space};
-  ${typography};
-  ${shadow};
-  ${layout};
-  ${border};
+ 
   &:focus,
   &:active,
   &.active {
@@ -35,12 +22,6 @@ const InputSolid = styled.input`
 
 const InputAnimation = styled.div`
   position: relative;
-  ${color};
-  ${space};
-  ${typography};
-  ${shadow};
-  ${layout};
-  ${border};
   input {
     width: 100%;
     padding: 1.275rem 1rem;

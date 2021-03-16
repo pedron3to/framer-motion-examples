@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import Link from "next/link";
 
@@ -31,7 +30,7 @@ const SiteHeader = styled.header`
       box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
       z-index: 9999;
       background: ${({ dark, theme }) =>
-        dark ? theme.colors.dark : theme.colors.light};
+    dark ? theme.colors.dark : theme.colors.light};
     }
   }
 `;
@@ -55,7 +54,7 @@ const Menu = styled.ul`
     > .nav-link {
       @media ${device.lg} {
         color: ${({ dark, theme }) =>
-          dark ? theme.colors.light : theme.colors.darkShade}!important;
+    dark ? theme.colors.light : theme.colors.darkShade}!important;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -209,12 +208,11 @@ const Header = ({ isDark = false }) => {
   return (
     <>
       <SiteHeader
-        className={`sticky-header ${showScrolling ? "scrolling" : ""} ${
-          showReveal ? "reveal-header" : ""
-        }`}
+        className={`sticky-header ${showScrolling ? "scrolling" : ""} ${showReveal ? "reveal-header" : ""
+          }`}
         dark={isDark ? 1 : 0}
       >
-        <Container fluid>
+        <div>
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
             <div className="brand-logo">
@@ -369,9 +367,8 @@ const Header = ({ isDark = false }) => {
               </Button>
             </div>
             <ToggleButton
-              className={`navbar-toggler btn-close-off-canvas ml-3 ${
-                gContext.visibleOffCanvas ? "collapsed" : ""
-              }`}
+              className={`navbar-toggler btn-close-off-canvas ml-3 ${gContext.visibleOffCanvas ? "collapsed" : ""
+                }`}
               type="button"
               data-toggle="collapse"
               data-target="#mobile-menu"
@@ -385,7 +382,7 @@ const Header = ({ isDark = false }) => {
               <i className="icon icon-menu-34 icon-burger d-block"></i>
             </ToggleButton>
           </nav>
-        </Container>
+        </div>
       </SiteHeader>
       <Offcanvas
         show={gContext.visibleOffCanvas}

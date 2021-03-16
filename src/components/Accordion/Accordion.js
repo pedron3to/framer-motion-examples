@@ -1,15 +1,5 @@
 import React, { useState, useRef } from 'react';
-import styled from 'styled-components';
-import {
-  color,
-  background,
-  space,
-  border,
-  typography,
-  shadow,
-  flexbox,
-  layout,
-} from 'styled-system';
+
 
 import Chevron from './Chevron';
 

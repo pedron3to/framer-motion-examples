@@ -7,7 +7,6 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-import { Button } from "react-bootstrap";
 
 const icons = {
   Facebook: <FaFacebookF />,

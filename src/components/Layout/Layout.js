@@ -6,21 +6,13 @@ import React, {
   useRef,
 } from "react";
 
+import styled from 'styled-components';
 
 import Head from "next/head";
 
 //import Header from "../Header";
 import Footer from "../Footer";
 
-import ModalVideo from "../ModalVideo";
-
-import GlobalContext from "../../context/GlobalContext";
-
-//import GlobalStyle from "../../utils/globalStyle";
-
-//import imgFavicon from "../../assets/favicon.png";
-
-import { theme as baseTheme } from '../../';
 
 const Loader = styled.div`
   position: fixed;

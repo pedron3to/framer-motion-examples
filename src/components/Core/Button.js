@@ -1,15 +1,6 @@
 import React from "react";
+
 import styled from "styled-components";
-import {
-  color,
-  background,
-  space,
-  border,
-  typography,
-  shadow,
-  flexbox,
-  layout,
-} from "styled-system";
 
 const ButtonSolid = styled.button`
   padding: 0.85rem 1.75rem;
@@ -26,14 +17,7 @@ const ButtonSolid = styled.button`
   overflow: hidden;
   outline: none !important;
   white-space: nowrap;
-  ${color};
-  ${background};
-  ${border};
-  ${space};
-  ${typography};
-  ${shadow};
-  ${flexbox};
-  ${layout};
+
 
   &:before {
     content: "";

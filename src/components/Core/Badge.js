@@ -1,15 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  color,
-  background,
-  space,
-  border,
-  typography,
-  shadow,
-  flexbox,
-  layout,
-} from "styled-system";
+
 
 const BadgeSolid = styled.span`
   font-size: 13px;
@@ -21,14 +12,7 @@ const BadgeSolid = styled.span`
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  ${color};
-  ${background};
-  ${border};
-  ${space};
-  ${typography};
-  ${shadow};
-  ${flexbox};
-  ${layout};
+
 `;
 
 const Badge = ({ color = "light", bg = "primary", ...rest }) => {
