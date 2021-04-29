@@ -8,14 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "autoprefixer": "^10.2.4",
-    "framer-motion": "^3.3.0",
-    "next": "canary",
-    "polished": "^4.1.1",
+    "framer-motion": "^4",
+    "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-select": "^4.2.1",
-    "styled-components": "^5.2.1"
+    "react-select": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.25",
