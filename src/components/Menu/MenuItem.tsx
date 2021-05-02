@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
+import {motion } from 'framer-motion'
 
-const MenuItemWrapper = styled.div`
+const MenuItemWrapper = styled(motion.li)`
   display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
 `;
 
 const IconPlaceHolder = styled.div`
@@ -11,7 +15,6 @@ const IconPlaceHolder = styled.div`
   flex: 40px 0;
   margin-right: 20px;
   background: pink;
-  border: 2px solid blue;
 `;
 
 const TextPlaceHolder = styled.div`
@@ -20,13 +23,33 @@ const TextPlaceHolder = styled.div`
   height: 20px;
   color: white;
   background: pink;
-  border: 2px solid blue;
   flex: 1;
 `;
 
+const variants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 }
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 }
+    }
+  }
+}
+
 export default function MenuItem() {
   return (
-    <MenuItemWrapper>
+    <MenuItemWrapper 
+    variants={variants}
+    whileHover={{ scale: 1.1}}
+    whileTap={{scale: 0.95}}
+    >
       <IconPlaceHolder />
       <TextPlaceHolder />
     </MenuItemWrapper>

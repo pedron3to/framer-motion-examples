@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
 
   return (
     <motion.path style={{ pathLength: scrollYProgress }}>
-      <Box as="main" w="100wh" h="100%" p="100px">
+      {/* <Box as="main" w="100wh" h="100%" p="100px">
         <Box>
           <Text fontWeight="bold" fontSize={20}>
             Animate
@@ -110,7 +110,7 @@ export default function Home(): JSX.Element {
             <Button mt="2">Button</Button>
           </motion.div>
         </Box>
-      </Box>
+      </Box> */}
     </motion.path>
   );
 }
