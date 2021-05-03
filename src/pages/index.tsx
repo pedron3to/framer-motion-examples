@@ -1,4 +1,4 @@
-import { Box, Text, Button } from '@chakra-ui/react';
+import { Box, Text, Button, Stack } from '@chakra-ui/react';
 import {
   motion,
   useMotionValue,
@@ -7,6 +7,8 @@ import {
 } from 'framer-motion';
 import { useState } from 'react';
 import DragBox from '../components/DragBox';
+import Menu from '../components/Menu';
+import ProgressBar from '../components/ProgressBar/Index';
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState(0);
@@ -21,100 +23,166 @@ export default function Home(): JSX.Element {
   };
 
   return (
-    <motion.path style={{ pathLength: scrollYProgress }}>
+    <Box>
       <DragBox key={count} />
-      {/* <Box as="main" w="100wh" h="100%" p="100px">
-        <Box>
-          <Text fontWeight="bold" fontSize={20}>
-            Animate
-          </Text>
-          <Text>x:100</Text>
-          <motion.div animate={{ x: 100 }}>
-            <Button mt="2">Button</Button>
-          </motion.div>
-          <Text>scale 0.7</Text>
-          <motion.div animate={{ scale: 0.7 }}>
-            <Button mt="2">Button</Button>
-          </motion.div>
-          <Text>scale 0.7 with transition 0.5ms</Text>
-          <motion.div animate={{ scale: 0.7 }} transition={{ duration: 0.5 }}>
-            <Button mt="2">Button</Button>
-          </motion.div>
-          <Text>
-            scale: [1,2,2,1,1] rotate= 0, 0, 270, 270, 0with transition 3s
-          </Text>
-          <motion.div
-            animate={{
-              scale: [1, 1.1, 1.1, 1, 1],
-              rotate: [0, 0, 270, 270, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
-            }}
-            transition={{
-              duration: 2,
-              ease: 'easeInOut',
-            }}
-          />
-        </Box>
-        <Box>
-          <Text fontWeight="bold" fontSize={20}>
-            Animate Server Side Rendering
-          </Text>
-          <Text>x:100 with property initial=false</Text>
-          <motion.div animate={{ x: 100 }} initial={false}>
-            <Button mt="2">Button</Button>
-          </motion.div>
-        </Box>
-        <Box mt="4">
-          <Text fontWeight="bold" fontSize={20}>
-            Gesture
-          </Text>
-          <Text>Drag X</Text>
-          <Text>Drag Constraint left = -100 right= 100</Text>
-          <Text>WhileHover</Text>
-          <Text>whileTap</Text>
-
-          <motion.div
-            drag="x"
-            dragConstraints={{ left: -100, right: 100 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Button mt="2">Button</Button>
-          </motion.div>
-        </Box>
-        <Box mt="4">
-          <Text fontWeight="bold" fontSize={20}>
-            Variants
-          </Text>
-          <Text>Animate hidden</Text>
-          <Text>variants=`list`</Text>
-          <motion.ul animate="hidden" variants={list} initial>
-            <motion.li variants={item} />
-          </motion.ul>
-        </Box>
-        <Box mt="4">
-          <Text fontWeight="bold" fontSize={20}>
-            Motion Values using framer hook - useMotionValue()
-          </Text>
-          <Text>
-            const x = useMotionValue(0) <br />
-            const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0])
-          </Text>
-          <Text>variants=`list`</Text>
-          <motion.div drag="x" style={{ teste, opacity1 }}>
-            <Button mt="2">Button</Button>
-          </motion.div>
-        </Box>
-        <Box mt="4">
-          <Text fontWeight="bold" fontSize={20}>
-            const variants
-          </Text>
-
-          <motion.div initial="hidden" animate="visible" variants={variants}>
-            <Button mt="2">Button</Button>
-          </motion.div>
-        </Box>
-      </Box> */}
-    </motion.path>
+      <ProgressBar/>
+      
+      <Stack spacing={2} mt={500} maxW={1200} align="left" mx="auto" px="8">
+        <Text>
+          {' '}
+          1 Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leap into electronic typesetting, remaining essentially
+          unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently
+          with desktop publishing software like Aldus PageMaker including
+          versions of Lorem Ipsum. Why do we use it? It is a long established
+          fact that a reader will be distracted by the readable content of a
+          page when looking at its layout. The point of using Lorem Ipsum is
+          that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable
+          English. Many desktop publishing packages and web page editors now use
+          Lorem Ipsum as their default model text, and a search for 'lorem
+          ipsum' will uncover many web sites still in their infancy. Various
+          versions have evolved over the years, sometimes by accident, sometimes
+          on purpose (injected humour and the like).
+        </Text>
+        <Text>
+          {' '}
+          2 Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Iaisdhiaushdiaushdiuhted by the readable content of a page when
+          looking at its layout. The point of using Lorem Ipsum is that it has a
+          more-or-less normal distribution of letters, as opposed to using
+          'Content here, content here', making it look like readable English.
+          Many desktop publishing packages and web page editors now use Lorem
+          Ipsum as their default model text, and a search for 'lorem ipsum' will
+          uncover many web sites still in their infancy. Various versions have
+          evolved over the years, sometimes by accident, sometimes on purpose
+          (injected humour and the like).
+        </Text>
+        <Text>
+          {' '}
+          3Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leuyguyguyguygf letters, as opposed to using 'Content
+          here, content here', making it look like readable English. Many
+          desktop publishing packages and web page editors now use Lorem Ipsum
+          as their default model text, and a search for 'lorem ipsum' will
+          uncover many web sites still in their infancy. Various versions have
+          evolved over the years, sometimes by accident, sometimes on purpose
+          (injected humour and the like).
+        </Text>
+        <Text>
+          {' '}
+          4Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leuyguyguyguygf letters, as opposed to using 'Content
+          here, content here', making it look like readable English. Many
+          desktop publishing packages and web page editors now use Lorem Ipsum
+          as their default model text, and a search for 'lorem ipsum' will
+          uncover many web sites still in their infancy. Various versions have
+          evolved over the years, sometimes by accident, sometimes on purpose
+          (injected humour and the like).
+        </Text>
+        <Text>
+          {' '}
+          5Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leuyguyguyguygf letters, as opposed to using 'Content
+          here, content here', making it look like readable English. Many
+          desktop publishing packages and web page editors now use Lorem Ipsum
+          as their default model text, and a search for 'lorem ipsum' will
+          uncover many web sites still in their infancy. Various versions have
+          evolved over the years, sometimes by accident, sometimes on purpose
+          (injected humour and the like).
+        </Text>
+      </Stack>
+      <Stack spacing={2} mt={500} maxW={1200} align="left" mx="auto" px="8">
+        <Text>
+          {' '}
+          1 Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industrys standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leap into electronic typesetting, remaining essentially
+          unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently
+          with desktop publishing software like Aldus PageMaker including
+          versions of Lorem Ipsum. Why do we use it? It is a long established
+          fact that a reader will be distracted by the readable content of a
+          page when looking at its layout. The point of using Lorem Ipsum is
+          that it has a more-or-less normal distribution of letters, as opposed
+          to using Content here, content here, making it look like readable
+          English. Many desktop publishing packages and web page editors now use
+          Lorem Ipsum as their default model text, and a search for lorem ipsum
+          will uncover many web sites still in their infancy. Various versions
+          have evolved over the years, sometimes by accident, sometimes on
+          purpose (injected humour and the like).
+        </Text>
+        <Text>
+          {' '}
+          2 Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Iaisdhiaushdiaushdiuhted by the readable content of a page when
+          looking at its layout. The point of using Lorem Ipsum is that it has a
+          more-or-less normal distribution of letters, as opposed to using
+          'Content here, content here, making it look like readable English.
+          Many desktop publishing packages and web page editors now use Lorem
+          Ipsum as their default model text, and a search for lorem ipsum will
+          uncover many web sites still in their infancy. Various versions have
+          evolved over the years, sometimes by accident, sometimes on purpose
+          (injected humour and the like).
+        </Text>
+        <Text>
+          {' '}
+          3Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industrys standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leuyguyguyguygf letters, as opposed to using Content
+          here, content here, making it look like readable English. Many desktop
+          publishing packages and web page editors now use Lorem Ipsum as their
+          default model text, and a search for will uncover many web sites still
+          in their infancy. Various versions have evolved over the years,
+          sometimes by accident, sometimes on purpose (injected humour and the
+          like).
+        </Text>
+        <Text>
+          {' '}
+          4Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the s standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make
+          a type specimen book. It has survived not only five centuries, but
+          also the leuyguyguyguygf letters, as opposed to using Content here,
+          content here, making it look like readable English. Many desktop
+          publishing packages and web page editors now use Lorem Ipsum as their
+          default model text, and a search for lorem ipsum will uncover many web
+          sites still in their infancy. Various versions have evolved over the
+          years, sometimes by accident, sometimes on purpose (injected humour
+          and the like).
+        </Text>
+        <Text>
+          {' '}
+          5Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industrys standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leuyguyguyguygf letters, as opposed to using Content
+          here, content here, making it look like readable English. Many desktop
+          publishing packages and web page editors now use Lorem Ipsum as their
+          default model text, and a search for lorem ipsum will uncover many web
+          sites still in their infancy. Various versions have evolved over the
+          years, sometimes by accident, sometimes on purpose (injected humour
+          and the like).
+        </Text>
+      </Stack>
+    </Box>
   );
 }

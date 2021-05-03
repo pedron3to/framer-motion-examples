@@ -6,7 +6,8 @@ import Navigation from './Navigation';
 
 const NavWrapper = styled(motion.nav)`
   position: absolute;
-  top: 0;
+  margin-top: 0px;
+  top: -500px;
   left: 0;
   bottom: 0;
   width: 300px;
@@ -14,7 +15,8 @@ const NavWrapper = styled(motion.nav)`
 
 const SideBar = styled(motion.div)`
   position: absolute;
-  top: 0;
+  margin-top: 0;
+  top: 0px;
   left: 0;
   bottom: 0;
   width: 300px;
