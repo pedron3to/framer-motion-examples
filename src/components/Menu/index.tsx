@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react';
 import { useCycle, motion } from 'framer-motion';
 import MenuToggle from './MenuToggle';
 import Navigation from './Navigation';
@@ -13,7 +13,7 @@ const NavWrapper = styled(motion.nav)`
 `;
 
 const SideBar = styled(motion.div)`
-position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -25,20 +25,20 @@ const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 20,
-      restDelta: 2
-    }
+      restDelta: 2,
+    },
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: 'circle(30px at 40px 40px)',
     transition: {
       delay: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
-      damping: 40
-    }
-  }
+      damping: 40,
+    },
+  },
 };
 
 const useDimensions = ref => {
@@ -53,20 +53,18 @@ const useDimensions = ref => {
 };
 
 export default function Menu() {
-  const [isOpen, setIsOpen] = useCycle(false, true); 
+  const [isOpen, setIsOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
   return (
-    <NavWrapper 
-    initial={false}
-    animate={isOpen ? "open" : "closed"}
-    custom={height}
-    ref={containerRef}
-  >
-
-
-      <SideBar variants={sidebar}  />
+    <NavWrapper
+      initial={false}
+      animate={isOpen ? 'open' : 'closed'}
+      custom={height}
+      ref={containerRef}
+    >
+      <SideBar variants={sidebar} />
       <Navigation />
       <MenuToggle isOpen={() => setIsOpen()} />
     </NavWrapper>

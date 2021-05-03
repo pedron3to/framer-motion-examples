@@ -5,8 +5,11 @@ import {
   useTransform,
   useViewportScroll,
 } from 'framer-motion';
+import { useState } from 'react';
+import DragBox from '../components/DragBox';
 
 export default function Home(): JSX.Element {
+  const [count, setCount] = useState(0);
   const list = { opacity: 0 };
   const item = { hidden: { x: -10, opacity: 1 } };
   const teste = useMotionValue(0);
@@ -19,6 +22,7 @@ export default function Home(): JSX.Element {
 
   return (
     <motion.path style={{ pathLength: scrollYProgress }}>
+      <DragBox key={count} />
       {/* <Box as="main" w="100wh" h="100%" p="100px">
         <Box>
           <Text fontWeight="bold" fontSize={20}>
