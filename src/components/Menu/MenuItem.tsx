@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const MenuItemWrapper = styled(motion.li)`
   display: flex;
@@ -31,24 +31,24 @@ const variants = {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 }
-    }
+      y: { stiffness: 1000, velocity: -100 },
+    },
   },
   closed: {
     y: 50,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 }
-    }
-  }
-}
+      y: { stiffness: 1000 },
+    },
+  },
+};
 
 export default function MenuItem() {
   return (
-    <MenuItemWrapper 
-    variants={variants}
-    whileHover={{ scale: 1.1}}
-    whileTap={{scale: 0.95}}
+    <MenuItemWrapper
+      variants={variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
     >
       <IconPlaceHolder />
       <TextPlaceHolder />

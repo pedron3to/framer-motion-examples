@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
 
 const DragButton = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   width: 150px;
   height: 150px;
   background: white;
@@ -15,7 +15,7 @@ const DragButton = styled(motion.div)`
 `;
 
 const DragArea = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   width: 300px;
   height: 300px;
   background: transparent;

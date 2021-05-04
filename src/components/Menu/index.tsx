@@ -5,7 +5,7 @@ import MenuToggle from './MenuToggle';
 import Navigation from './Navigation';
 
 const NavWrapper = styled(motion.nav)`
-  position: absolute;
+  position: fixed;
   margin-top: 0px;
   top: -500px;
   left: 0;
@@ -14,7 +14,7 @@ const NavWrapper = styled(motion.nav)`
 `;
 
 const SideBar = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   margin-top: 0;
   top: 0px;
   left: 0;
@@ -55,7 +55,7 @@ const useDimensions = ref => {
 };
 
 export default function Menu() {
-  const [isOpen, setIsOpen] = useCycle(false, true);
+  const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
@@ -68,7 +68,7 @@ export default function Menu() {
     >
       <SideBar variants={sidebar} />
       <Navigation />
-      <MenuToggle isOpen={() => setIsOpen()} />
+      <MenuToggle toggle={() => toggleOpen()} />
     </NavWrapper>
   );
 }

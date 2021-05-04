@@ -5,7 +5,7 @@ import MenuItem from './MenuItem';
 const Ul = styled(motion.ul)`
   margin: 0;
   padding: 25px;
-  position: absolute;
+  position: fixed;
   top: 100px;
   width: 230px;
   margin-top: 0;
