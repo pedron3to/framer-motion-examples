@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+   :computer: Examples with Framer Motion. | <a href="https://https://www.framer.com/api/motion/">Framer Motion</a>
+</p>
 
-## Getting Started
+<div align="center">
+  <sub> Made by
+    <a href="https://github.com/lucaslauriano">Lucas Lauriano
+  </sub>
+</div>
 
-First, run the development server:
+# 📌 Contents
+
+* [Technologies](#technologies)
+* [How to Run](#how-to-run)
+* [Contributing](#sparkles-issues)
+* [License](#page_facing_up-license)
+
+# :rocket: Technologies
+This project was made using the follow technologies:
+
+* [Typescript](https://www.typescriptlang.org/)
+* [NextJS](https://nextjs.org/)
+* [Chakra UI](https://chakra-ui.com/)
+* [Emotion](https://emotion.sh/)
+* [JSON-Server](https://www.npmjs.com/package/json-server)
+* [React Query](https://react-query.tanstack.com/)
+* [React Hook Form](https://react-hook-form.com/)
+* [Apex Charts](https://apexcharts.com/)
+* [Framer Emotion](https://www.framer.com/motion/)
+* [React](https://reactjs.org/)
+* [Yup](https://github.com/jquense/yup)
+
+# :computer: How to run
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone Repository
+$ git clone https://github.com/lucaslauriano/survivors-challange.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+$ cd /backend
+# Install Dependencies
+$ yarn
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+$ yarn start
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+$ cd ..
+$ cd /frontend
+# Install Dependencies
+$ yarn
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+$ yarn dev
+```
 
-## Learn More
+Go to http://localhost:3000/survivors to see the result.
+# :sparkles: Contributing
 
-To learn more about Next.js, take a look at the following resources:
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My new feature'`;
+- Push to your branch: `git push origin my-feature`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# :page_facing_up: License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is under the [MIT license](./LICENSE).
+Made by [Lucas Lauriano](https://www.linkedin.com/in/lucaslauriano/).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you! 🌠
