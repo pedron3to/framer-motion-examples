@@ -4,7 +4,7 @@
 
 <div align="center">
   <sub> Made by
-    <a href="https://github.com/lucaslauriano">Pedro Cassiano
+    <a href="https://github.com/pedron3to">Pedro Cassiano
   </sub>
 </div>
 
@@ -29,31 +29,20 @@ This project was made using the follow technologies:
 
 ```bash
 # Clone Repository
-$ git clone https://github.com/lucaslauriano/survivors-challange.git
+$ git clone https://github.com/pedron3to/framer-motion-examples.git
 ```
 
 ```bash
-$ cd /backend
+$ cd framer-motion-examples
 # Install Dependencies
-$ yarn
-```
-
-```bash
-$ yarn start
-```
-
-```bash
-$ cd ..
-$ cd /frontend
-# Install Dependencies
-$ yarn
+$ yarn 
 ```
 
 ```bash
 $ yarn dev
 ```
 
-Go to http://localhost:3000/survivors to see the result.
+Go to http://localhost:3000 to see the result.
 # :sparkles: Contributing
 
 - Fork this repository;
@@ -64,6 +53,6 @@ Go to http://localhost:3000/survivors to see the result.
 # :page_facing_up: License
 
 This project is under the [MIT license](./LICENSE).
-Made by [Lucas Lauriano](https://www.linkedin.com/in/lucaslauriano/).
+Made by [Pedro Cassiano](https://www.linkedin.com/in/pedro-cassiano-de-araujo-neto-sartor-70242854/).
 
 Thank you! 🌠
