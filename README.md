@@ -4,7 +4,7 @@
 
 <div align="center">
   <sub> Made by
-    <a href="https://github.com/lucaslauriano">Lucas Lauriano
+    <a href="https://github.com/lucaslauriano">Pedro Cassiano
   </sub>
 </div>
 
@@ -22,13 +22,8 @@ This project was made using the follow technologies:
 * [NextJS](https://nextjs.org/)
 * [Chakra UI](https://chakra-ui.com/)
 * [Emotion](https://emotion.sh/)
-* [JSON-Server](https://www.npmjs.com/package/json-server)
-* [React Query](https://react-query.tanstack.com/)
-* [React Hook Form](https://react-hook-form.com/)
-* [Apex Charts](https://apexcharts.com/)
 * [Framer Emotion](https://www.framer.com/motion/)
 * [React](https://reactjs.org/)
-* [Yup](https://github.com/jquense/yup)
 
 # :computer: How to run
 
