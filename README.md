@@ -1,5 +1,5 @@
 <p align="center">
-   :computer: Examples with Framer Motion. | <a href="https://https://www.framer.com/api/motion/">Framer Motion</a>
+   :computer: Studies about Framer Motion API. | <a href="https://https://www.framer.com/api/motion/">Framer Motion</a>
 </p>
 
 <div align="center">
